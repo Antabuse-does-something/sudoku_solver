@@ -105,18 +105,25 @@ int AlreadyInSquare(char grid[], size_t cols, int x, int y, int val){
 //@param y the y coordinate of the square
 //@return 1 if the grid is solved, 0 if not
 int SolveRec(char grid[], size_t rows, size_t cols, int x, int y) {
+    // if we have to change the row
     if (x > (int)rows -1){
         x = 0;
         y++;
     }
+    // if the grid is solved
     if (y > (int)cols -1){
         return 1;
     }
+    // check if we have to change the value or not
     if (grid[x * cols + y] == '.' || grid[x*cols +y] == '0'){
+        // testing the possible values
         for (size_t i = 1; i < rows+1; i++){
+            // checking if the values is valid
             if (!AlreadyInColumn(grid, rows, cols, x, i) && !AlreadyInLine(grid, cols, y, i) && !AlreadyInSquare(grid, cols, x, y, i)){
 	            grid[x * cols + y] = (char)(i + '0');
+                // recursively calling the function
                 int result = SolveRec(grid, rows, cols, x+1, y);
+                // call back the function if the value isn't valid
                 if (!result){
                     grid[x * cols + y] = '0';
                 }
