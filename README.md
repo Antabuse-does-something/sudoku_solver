@@ -33,7 +33,7 @@ Your file has to follow this format :
 ```
 
 
-Replace all the with the numbers from your sudoku puzzle.
+Replace the dots with the numbers from your sudoku puzzle.
 
 ```./sudoku_solver <file>```
 
