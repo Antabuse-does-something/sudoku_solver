@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <err.h>
 
+
 //IsValid checks if the sudoku grid is valid
 //@param grid the sudoku grid
 //@return 1 if the grid is valid, 0 if not
