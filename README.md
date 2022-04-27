@@ -12,7 +12,7 @@ A command line efficient sudoku solver written in C.
 ```
 git clone https://github.com/Antabuse-does-something/sudoku_solver.git
 cd ./sudoku_solver/src
-make
+chmod +x build.sh
 ```
 
 ## Usage
