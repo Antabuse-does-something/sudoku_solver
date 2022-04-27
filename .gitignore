@@ -1,4 +1,3 @@
 *.result*
-*.expect*
 build
 sudoku_solver
